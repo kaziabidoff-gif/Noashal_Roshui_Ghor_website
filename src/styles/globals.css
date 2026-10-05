@@ -1,0 +1,16 @@
+@import "tailwindcss";
+:root{--paper:#F6EFDF;--ink:#33251E;--terracotta:#A84932;--green:#68734A;--mustard:#C49A43;}
+@theme inline{--color-paper:var(--paper);--color-ink:var(--ink);--color-terra:var(--terracotta);--color-leaf:var(--green);--color-gold:var(--mustard);
+--font-display:"Noto Serif Bengali",serif;--font-body:"Hind Siliguri",system-ui,sans-serif;}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:4.5rem}
+body{margin:0;background-color:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.75;
+background-image:radial-gradient(rgba(196,154,67,.16) 1px,transparent 1.5px);background-size:22px 22px;padding-bottom:4rem}
+@media(min-width:768px){body{padding-bottom:0}}
+h1,h2,h3{font-family:var(--font-display);line-height:1.4}
+.nakshi-border{height:10px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10'%3E%3Cpath d='M10 1l4 4-4 4-4-4z' fill='none' stroke='%23A84932' stroke-width='1'/%3E%3Ccircle cx='1' cy='5' r='1' fill='%23C49A43'/%3E%3Ccircle cx='19' cy='5' r='1' fill='%23C49A43'/%3E%3C/svg%3E");background-repeat:repeat-x;background-position:center}
+.nakshi-ph{background:linear-gradient(135deg,#eadcbc,#f1e6cb);color:var(--terracotta)}
+.hero-in{animation:rise .8s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+:focus-visible{outline:2px solid var(--terracotta);outline-offset:2px}
